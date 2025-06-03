@@ -58,7 +58,7 @@ def part4(df2_clean):
         altair.Color('price:Q', title = 'Price').scale(scheme = 'blues')
     ).add_params(
         zoom
-    ).show()
+    )
     return chart
 
 streamlit.title("Discussion 6.7 Inside Airbnb Dashboard")
