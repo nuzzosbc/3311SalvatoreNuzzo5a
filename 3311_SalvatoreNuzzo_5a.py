@@ -63,6 +63,9 @@ def part4(df2_clean):
 
 streamlit.title("Discussion 6.7 Inside Airbnb Dashboard")
 
+streamlit.write("Salvatore Nuzzo")
+streamlit.write("CSCI 3311 - June 2, 2025")
+
 df = pandas.read_csv('listings.csv')
 df_clean = cleaning(df)
 
