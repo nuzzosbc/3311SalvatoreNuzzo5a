@@ -66,16 +66,18 @@ streamlit.title("Discussion 6.7 Inside Airbnb Dashboard")
 df = pandas.read_csv('listings.csv')
 df_clean = cleaning(df)
 
+streamlit.write("For all charts, interactive zooming and panning is available. Please select the price range for all the charts below.")
 price_range = streamlit.slider("Select Price Range", 25, 2006, (25, 2050))
 
 filtered_df_clean = df_clean[df_clean['price'].between(*price_range)]
 
-streamlit.write("Charts 1 and 2")
+streamlit.write("**Charts 1 and 2: Comparing Prices with Bedrooms**")
+streamlit.write("For these charts, you can select on the histogram the price range you would like to view, and the data points on the price / bedroom plot below will be updated.")
 streamlit.altair_chart(parts1and2(filtered_df_clean), use_container_width = True)
 
-streamlit.write("Chart 3")
+streamlit.write("**Chart 3: Estimated Revenue by Price**")
 streamlit.altair_chart(part3(filtered_df_clean), use_container_width = True)
 
-streamlit.write("Chart 4")
+streamlit.write("**Chart 4: Review Scores Ratings vs Number of Reviews**")
 streamlit.altair_chart(part4(filtered_df_clean), use_container_width = True)
 
