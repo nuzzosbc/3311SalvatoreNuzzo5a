@@ -61,6 +61,8 @@ def part4(df2_clean):
     )
     return chart
 
+streamlit.set_page_config(page_title = "Discussion 6.7 Inside Airbnb Dashboard")
+
 streamlit.title("Discussion 6.7 Inside Airbnb Dashboard")
 
 streamlit.write("Salvatore Nuzzo")
